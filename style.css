@@ -1,0 +1,53 @@
+/* Color Palette
+    light grey: #d3d6db; 
+    dark grey: #3a4750; 
+    darker grey #303841; 
+    black: #1f252b;
+    red: #be3144; 
+    offwhite: #e9e1cc; 
+*/
+
+body {
+    background-color: #e9e1cc;
+    color: #303841;
+    font-family: Georgia;
+    margin: 0;
+}
+
+h1 {
+    background-color: #1f252b;
+    color: #be3144; 
+    text-align: center;
+    padding: 20px 0 5px 0;
+    margin: 0;
+}
+
+nav {
+    background-color: #1f252b; 
+    text-align: center;
+    padding: 15px;
+    border-bottom: 3px solid #be3144;
+}
+
+nav a {
+    color: #d3d6db;
+    padding: 5px;
+}
+
+nav a:hover {
+    color: #be3144;
+}
+
+div {
+    margin: 40px;
+}
+
+h2 {
+    color: #be3144;
+    border-bottom: 1px solid #be3144;
+    padding-bottom: 10px;
+}
+
+h3 {
+    color: #be3144;
+}
