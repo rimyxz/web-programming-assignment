@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <link rel="icon" href="images/logo.png">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body class="case-page">
+        <h1>The Horror Archive</h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="case-files.html">Case Files</a>
+            <a href="urban-legends.html">Urban Legends</a>
+            <a href="about.html">About</a>
+        </nav>
+
+
+        <div class="case-files">
+            <h2>Case Files</h2>
+
+            <p>
+                Case files of reported events that remain unsolved, or unexplained. They can include mysterious disappearances, unsolved crimes, strange incidents, and other cases that continue to raise questions and theories.
+            </p>
+
+            <div class="case-grid">
+                <section class="case" onclick="showCase(this)">
+                    <h3>File #01: Zodiac Killer</h3>
+                    <img src="images/zodiac.png" alt="Zodiac Killer">
+                    <div class="case-info">
+                        <p>
+                            Case: Zodiac Killer <br>
+                            Location: Northern California, United States <br>
+                            Time Period: 1968–1969 <br>
+                            Status: Unsolved <br><br>
+                             
+                            The Zodiac Killer was an unidentified person who committed a series of murders in Northern California during the late 1960s. The killer became known as the “Zodiac” after sending letters and cryptograms to newspapers, claiming responsibility for the attacks. Some of the letters included messages that challenged police and the public to identify him.
+                            The Zodiac Killer was linked to at least five murders, although he claimed to have killed more people. Several suspects were investigated over the years, but no one was officially identified or convicted as the Zodiac Killer. The case remains one of the most well-known unsolved criminal cases in the United States. <br><br>
+
+                            Source: Wikipedia, “Zodiac Killer”
+                        </p>
+                    </div>
+                </section>
+
+                <section class="case" onclick="showCase(this)">
+                    <h3>File #02: Jack the Ripper</h3>
+                    <img src="images/jack.png" alt="Jack the Ripper">
+                    <div class="case-info">
+                        <p>
+                            Case: Jack the Ripper <br>
+                            Location: Whitechapel, London, England <br>
+                            Time Period: 1888 <br> 
+                            Status: Unsolved <br><br>
+
+                            Jack the Ripper was the name given to an unidentified killer who murdered women in the Whitechapel area of London in 1888. The murders were particularly disturbing because of the injuries inflicted on the victims. The killer's identity was never confirmed, and the case received widespread attention from newspapers and the public.
+                            At least five murders are commonly considered to be connected to Jack the Ripper. These victims are often referred to as the “canonical five.” Police investigated many suspects, but no one was officially identified as the killer. Over the years, many theories and suspects have been proposed, but the case remains unsolved. <br><br>
+                            
+                            Source: Wikipedia, “Jack the Ripper”
+                        </p>
+                    </div>
+                </section>
+
+                <section class="case" onclick="showCase(this)">
+                    <h3>File #03: The Bermuda Triangle</h3>
+                    <img src="images/triangle.png" alt="The Bermuda Triangle">
+                    <div class="case-info">
+                        <p>
+                            Case: The Bermuda Triangle <br>
+                            Location: Western North Atlantic Ocean <br>
+                            Time Period: 20th century–present <br>
+                            Status: Unexplained <br><br>
+
+                            The Bermuda Triangle is a region of the Atlantic Ocean where a number of ships and aircraft have reportedly disappeared under mysterious circumstances. It is generally described as an area between Florida, Bermuda, and Puerto Rico. Stories about the Bermuda Triangle became especially popular during the 20th century as books, magazines, and television programs described strange disappearances in the area.One of the most famous cases c onnected to the Bermuda Triangle is Flight 19, a group of five U.S. Navy aircraft that disappeared during a training flight in 1945. A rescue aircraft sent to search for them also disappeared. The exact cause of the disappearances has been debated, although explanations include bad weather, navigation problems, and human error. Despite its reputation, there is no established evidence that disappearances happen more frequently in the Bermuda Triangle than in other heavily traveled areas of the ocean. <br><br>
+                         
+                            Source: Wikipedia, “Bermuda Triangle”
+                        </p>
+                    </div>
+                </section>
+
+                <section class="case" onclick="showCase(this)">
+                    <h3>File #04: The Mary Celeste</h3>
+                    <img src="images/ship.png" alt="The Mary Celeste">
+                    <div class="case-info">
+                        <p>
+                            Case: The Mary Celeste <br>
+                            Location: Atlantic Ocean <br>
+                            Time Period: 1872 <br>
+                            Status: Unsolved <br><br>
+
+                            The Mary Celeste was an American merchant ship that was discovered abandoned in the Atlantic Ocean on December 4, 1872. The ship was found sailing normally, but there was no one aboard. The crew, along with the captain's wife and daughter, had disappeared. The ship was found with most of its cargo and personal belongings still onboard. The lifeboat was missing, suggesting that the people aboard may have left the ship. However, no one knows exactly why they abandoned it or what happened to them. Many theories have been suggested, including bad weather, problems with the ship's cargo, or fear that the ship was sinking. However, none of these theories has been proven. <br><br>
+          
+                            Source: Wikipedia, “Mary Celeste”
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </body>
+
+    <!-- Opens or closes a card when clicked -->
+    <script>
+        function showCase(caseFile) {
+            caseFile.classList.toggle("open");
+        }
+    </script>
+</html>

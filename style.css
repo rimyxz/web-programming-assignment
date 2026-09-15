@@ -1,53 +1,177 @@
 /* Color Palette
-    light grey: #d3d6db; 
-    dark grey: #3a4750; 
-    darker grey #303841; 
-    black: #1f252b;
-    red: #be3144; 
-    offwhite: #e9e1cc; 
+    Silver Grey: #d3d6db; 
+    Charcoal: #303841; 
+    Dark Charcoal: #1f252b;
+    Blood Red: #be3144; 
+    Antique White: #e9e1cc; 
+
+    Obsidian: #111315;
+    Graphite: #1c1f22;
+    Ash Grey: #c7c9ca;
+    Dark Burgundy: #8f2635;
 */
 
+:root {
+    --silver-grey: #d3d6db;
+    --charcoal: #303841;
+    --dark-charcoal: #1f252b;
+    --blood-red: #be3144;
+    --antique-white: #e9e1cc; 
+
+    --obsidian: #111315;
+    --graphite: #1c1f22;
+    --ash-grey: #c7c9ca;
+    --dark-burgundy: #8f2635;
+}
+
+/* Global Styles 
+-------------------------------*/
 body {
-    background-color: #e9e1cc;
-    color: #303841;
+    background-color: var(--antique-white);
+    color: var(--charcoal);
     font-family: Georgia;
     margin: 0;
+    padding-top: 120px;
 }
 
 h1 {
-    background-color: #1f252b;
-    color: #be3144; 
+    background-color: var(--dark-charcoal);
+    color: var(--blood-red);
     text-align: center;
-    padding: 20px 0 5px 0;
+    padding: 20px 0px 5px 0;
     margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 nav {
-    background-color: #1f252b; 
+    background-color: var(--dark-charcoal);
     text-align: center;
     padding: 15px;
-    border-bottom: 3px solid #be3144;
+    border-bottom: 3px solid var(--blood-red);
+    position: fixed;
+    width: 100%;
+    top: 61px;
+    left: 0;
 }
 
 nav a {
-    color: #d3d6db;
+    color: var(--silver-grey);
     padding: 5px;
+    text-decoration: none;
 }
 
 nav a:hover {
-    color: #be3144;
-}
-
-div {
-    margin: 40px;
+    color: var(--blood-red);
 }
 
 h2 {
-    color: #be3144;
-    border-bottom: 1px solid #be3144;
+    color: var(--blood-red);
+    border-bottom: 1px solid var(--blood-red);
     padding-bottom: 10px;
 }
 
 h3 {
-    color: #be3144;
+    color: var(--blood-red);
+}
+
+/* About Page
+-------------------------------*/
+.about {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+
+/* Home Page
+-------------------------------*/
+.home-page {
+    background-color: var(--obsidian);
+    color: var(--ash-grey);
+}
+
+.welcome {
+    text-align: center;
+    margin-top: 150px;
+}
+
+.welcome h2 {
+    color: var(--blood-red);
+    font-family: "Creepster", Georgia;
+    font-size: 150px;
+    border: none;
+    margin-bottom: 5px;
+}
+
+/* Urban Legends + Case Files
+-------------------------------*/
+.urban-page, .case-page {
+    background-color: var(--obsidian);
+    color: var(--ash-grey);
+}
+
+.urban-legends, .case-files {
+    max-width: 1300px;
+    margin: 40px auto;
+}
+
+.urban-legends h2, .case-files h2 {
+    color: var(--ash-grey);
+    border-bottom: 1px solid var(--charcoal);
+}
+
+/* Creates a grid with four cards in each row */
+.legend-grid, .case-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 25px;
+    margin-top: 20px;
+}
+
+/* Styles each card */
+.legend, .case {
+    background-color: var(--graphite);
+    color: var(--ash-grey);
+    border: 1px solid var(--charcoal);
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.legend:hover, .case:hover {
+    background-color: var(--dark-charcoal);
+    border-color: var(--dark-burgundy);
+}
+
+.legend img, .case img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.legend h3, .case h3 {
+    color: var(--ash-grey);
+    font-size: 17px;
+    margin: 5px 5px 10px 5px;
+}
+
+.legend-info, .case-info {
+    display: none; /* Hides the description until the card is clicked */
+}
+
+.legend.open, .case.open {
+    grid-column: span 1;
+}
+
+.legend.open .legend-info,
+.case.open .case-info {
+    display: block;
+}
+
+.legend.open img, .case.open img {
+    width: 400px;
+    height: 300px;
 }
